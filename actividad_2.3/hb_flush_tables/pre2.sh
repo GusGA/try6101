@@ -7,12 +7,7 @@ defaults_file="/etc/my.cnf"
 timeout=30
 lock_file=/tmp/mysql_tables_read_lock
 ###
-if [ -f $defaults_file ]; then
-  opts="--defaults-file=$defaults_file"
-fi
-if [ -n $use_credentials ]; then
-  opts="$opts $use_credentials"
-fi
+opts="--defaults-file=$defaults_file"
 sleep_time=$((timeout + 10))
 rm -f $lock_file
 echo "$0 executing FLUSH TABLES WITH READ LOCK" | logger

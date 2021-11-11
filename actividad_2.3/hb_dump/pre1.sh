@@ -3,8 +3,8 @@
 # when running on debian we can use existing debian-sys-maint account using defaults file
 # otherwise, specify username and password below using use_credentials
 
-use_credentials="-u root -pDuoc.2019"
-#defaults_file="/etc/my.cnf"
+#use_credentials="-u root -pDuoc.2019"
+defaults_file="/etc/my.cnf"
 dump_file="/tmp/mysql_dump.sql"
 database="--all-databases"
 if [ -n "$use_credentials" ]; then
